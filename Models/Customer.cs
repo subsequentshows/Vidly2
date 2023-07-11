@@ -10,9 +10,10 @@ namespace Vidly2.Models
   {
     public int Id { get; set; }
     [Required]
+    [StringLength(50)]
     public string Name { get; set; }
     public bool IsSubcribedToNewsletter { get; set; }
-    public MembershipType MembershipType { get; set; }
+    public MembershipTypes MembershipType { get; set; }
     public byte MembershipTypeId { get; set; }
     public int PhoneNumber { get; set; }
     public string Province { get; set; }
@@ -20,6 +21,5 @@ namespace Vidly2.Models
     public string ReferralCode { get; set; }
     public int RegisterdTime { get; set; }
     public int RegisterdDate { get; set; }
-    public int TestProp { get; set; }
   }
 }
